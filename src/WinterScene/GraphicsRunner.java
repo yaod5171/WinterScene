@@ -3,7 +3,6 @@ package WinterScene;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -12,25 +11,23 @@ import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GraphicsRunner extends JFrame
-{
-	private static final int WIDTH = 800;
-	private static final int HEIGHT = 600;
+public class GraphicsRunner extends JFrame {
 
-	public GraphicsRunner()
-	{
-		super("THE WINTER SCENE PROJECT");
-		setSize(WIDTH,HEIGHT);
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
 
-		getContentPane().add(new WinterScenePanel());
+    public GraphicsRunner() {
+        super("THE WINTER SCENE PROJECT");
+        setSize(WIDTH, HEIGHT);
 
-		setVisible(true);
+        getContentPane().add(new WinterScenePanel());
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+        setVisible(true);
 
-	public static void main( String args[] )
-	{
-		GraphicsRunner run = new GraphicsRunner();
-	}
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public static void main(String args[]) {
+        GraphicsRunner run = new GraphicsRunner();
+    }
 }

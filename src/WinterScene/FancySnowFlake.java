@@ -10,8 +10,7 @@ import java.awt.Polygon;
 
 //extend the AbstractShape class to make a FancySnowFlake class
 class FancySnowFlake extends AbstractShape {
-    
-    
+
     public FancySnowFlake(int x, int y, int wid, int ht) {
         super(x, y, wid, ht);
     }
@@ -23,20 +22,21 @@ class FancySnowFlake extends AbstractShape {
     public FancySnowFlake(int x, int y, int wid, int ht, Color col, int xSpd, int ySpd) {
         super(x, y, wid, ht, col, xSpd, ySpd);
     }
-    
+
     //helper method
     private static final double SQRT3 = Math.sqrt(3);
+
     private int sqrt3(int n) {
         return (int) (SQRT3 * n);
     }
 
     public void draw(Graphics window, Color col) {
         window.setColor(col);
-        window.drawLine(getXPos() + getWidth()/2, getYPos(), getXPos() - getWidth()/2, getYPos());
-        window.drawLine(getXPos() + getWidth()/4, getYPos() + sqrt3(getHeight())/2, getXPos() - getWidth()/4, getYPos() - sqrt3(getHeight())/2);
-        window.drawLine(getXPos() - getWidth()/4, getYPos() + sqrt3(getHeight())/2, getXPos() + getWidth()/4, getYPos() - sqrt3(getHeight())/2);
+        window.drawLine(getXPos() + getWidth() / 2, getYPos(), getXPos() - getWidth() / 2, getYPos());
+        window.drawLine(getXPos() + getWidth() / 4, getYPos() + sqrt3(getHeight()) / 2, getXPos() - getWidth() / 4, getYPos() - sqrt3(getHeight()) / 2);
+        window.drawLine(getXPos() - getWidth() / 4, getYPos() + sqrt3(getHeight()) / 2, getXPos() + getWidth() / 4, getYPos() - sqrt3(getHeight()) / 2);
     }
-    
+
     @Override
     public void draw(Graphics window) {
         draw(window, getColor());
