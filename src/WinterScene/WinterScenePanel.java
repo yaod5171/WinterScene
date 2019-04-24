@@ -27,7 +27,7 @@ public class WinterScenePanel extends JPanel implements Runnable {
         shapes = new ArrayList(50);
         //populate the list with 50 unique snowflakes
         for (int i = 0; i < 50; i++) {
-            shapes.add(new FancySnowFlake((int) (Math.random()*800), (int) (Math.random()*600), 15, 15, Color.WHITE, (int) (Math.random()*3)-1, (int) (Math.random()*3)+1));
+            shapes.add(new SimpleSnowFlake((int) (Math.random()*800), (int) (Math.random()*600), 15, 15, Color.WHITE, (int) (Math.random()*3)-1, (int) (Math.random()*3)+1));
         }
         //instantiate a snowman
         sMan = new SnowMan(200, 300, 100, 200);
