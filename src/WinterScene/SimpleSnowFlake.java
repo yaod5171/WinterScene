@@ -45,6 +45,12 @@ class SimpleSnowFlake extends AbstractShape {
     @Override
     public void moveAndDraw(Graphics window) {
         draw(window, Color.BLUE);
+        
+        //experimental vx adjuster
+        //setXSpeed((int)((getXSpeed() +(int)(Math.random()*3 )-1)));
+        //setXSpeed((int)(getXSpeed()*Math.random()*4 + Math.random()-0.5));
+        //end experimental vx adjuster
+        
         setXPos(getXPos() + getXSpeed());
         setYPos(getYPos() + getYSpeed());
         draw(window);
